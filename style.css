@@ -1,0 +1,70 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+}
+
+nav {
+      background-color: black;
+}
+
+.menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+}
+
+.menu>li {
+      position: relative;
+      /* Necessary for dropdown positioning */
+}
+
+.menu>li>a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      transition: all 0.4s ease;
+      text-decoration: none;
+}
+
+.menu>li:hover>a {
+      background-color: rgb(36, 35, 35);
+      color: greenyellow;
+      /* Change background on hover */
+}
+
+.dropdown-content {
+      display: none;
+      /* Hide dropdown items initially */
+      position: absolute;
+      /* Position relative to the parent */
+      background-color: black;
+      min-width: 160px;
+      /* Set a minimum width */
+      z-index: 1;
+}
+
+.dropdown-content li {
+      list-style-type: none;
+}
+
+.dropdown-content li a {
+      padding: 12px 16px;
+      color: white;
+      text-decoration: none;
+      display: block;
+      transition: all 0.4s ease;
+      /* Make entire area clickable */
+}
+
+.dropdown-content li a:hover {
+      background-color: rgb(26, 24, 24);
+      color: greenyellow;
+      /* Change background on hover */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+      display: block;
+}
